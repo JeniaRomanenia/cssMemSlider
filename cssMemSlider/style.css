@@ -147,6 +147,20 @@ input {
   transform: translateY(-6rem);
 }
 
+@media screen and (max-width: 430px) {
+  .slider__discription-container  {
+    order: 2;
+  }
+
+  .slider__imgs-container {
+    order: 0;
+  }
+
+  .slider__btn-container {
+    order: 1;
+  }
+}
+
 
 
   
