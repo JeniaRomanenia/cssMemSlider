@@ -7,55 +7,70 @@
 }
 
 body {
-    font-family: "Muli", sans-serif;
-    /*overflow: hidden;*/
-    margin: 0;
-    background: rgb(141, 233, 146);
-    display: flex; 
-    align-items: center;
-  }
+  font-family: "Muli", sans-serif;
+  /*overflow: hidden;*/
+  margin: 0;
+  background: rgb(141, 233, 146);
+  display: flex; 
+  align-items: center;
+}
 
-  .container {
-    margin: 0 auto;
-    width: 100vw;
-    padding: 50px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
+input {
+  display: none;
+}
 
-  .slider__imgs-container {
-    height: 80%;
-    width: calc(100vw * 4);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
 
-  .display {
-    display: none;
-  }
+.slider__imgs-container {
+  height: 100%;
+  overflow: hidden;
+}
 
-  .img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+.slider__imgs-wraper{
+  display: flex;
+  width: calc(100vw * 4);
+  height: 70vh;
+}
 
-  .slider__discription-container {
-    font-size: 20px;
-  }
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
 
-  input {
-    display: none;
-  }
+.slider__discription-container {
+  font-size: 20px;
+}
 
-  .slider__img {
-    width: 100%;
-    
-  }
+.slider__img {
+  width: 100%;
+}
+
+#slider-1:checked ~ .slider__imgs-container .slider__imgs-wraper  {
+  transform: translateX(0);
+}
+  
+#slider-2:checked ~ .slider__imgs-container .slider__imgs-wraper  {
+  transform: translateX(-25%);
+}
+  
+#slider-3:checked ~ .slider__imgs-container .slider__imgs-wraper  {
+  transform: translateX(-50%);
+}
+  
+#slider-4:checked ~ .slider__imgs-container .slider__imgs-wraper {
+  transform: translateX(-75%);
+}
+
 .slider__btn-span, .slider__btn {
   cursor: pointer;
 }
@@ -106,20 +121,6 @@ body {
 
 
 
-#slider-1:checked ~ .slider__wraper {
-  transform: translateX(0);
-}
 
-#slider-2:checked ~ .slider__wraper > .slid-1 {
-  transform: translateX(-25%);
-}
-
-#slider-3:checked ~ .slider__wraper > .slid-1 {
-  transform: translateX(-50%);
-}
-
-#slider-4:checked ~ .slider__wraper > .slid-1 {
-  transform: translateX(-75%);
-}
 
   
